@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+input[type=checkbox]{
+	visibility: hidden;
+}
+.checkboxOne{
+	width: 40px;
+	height: 10px;
+	background: #555;
+	margin:20px 80px;
+	position: relative;
+	border-radius: 3px;
+
+}
+.checkboxOne label{
+	display: block;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	-webkit-transition:all .5s ease;
+	-moz-transition:all .5s ease;
+	-o-transition:all .5s ease;
+	-ms-transition:all .5s ease;
+	transition:all .5s ease;
+	cursor: pointer;
+	position: absolute;
+	top: -3px;
+	left: -3px;
+	background:#ccc;
+
+}
+.checkboxOne input[type=checkbox]:checked + label{
+	left: 27px;
+}
+</style>
+
+<body>
+
+    <header class="header">点击</header>
+
+    <div class="box" id="box">
+		<a href="/625.html">2016款 升级款 豪华型</a>
+		<a class="on" href="/626.html">2016款 升级款 时尚型</a>
+		<a href="/627.html">2016款 升级款 增程型</a>
+    </div>
+    <div class="main">
+		<h3></h3>
+		<div class="checkboxOne">
+			<input type="checkbox" value="1" id="checkboxOneInput" name="">
+			<label for="checkboxOneInput"></label>
+		</div>
+    </div>
+    <div class="main">
+		<h3></h3>
+		<div class="checkboxOne">
+			<input type="checkbox" value="1" id="checkboxOneInput" name="">
+			<label for="checkboxOneInput"></label>
+		</div>
+    </div>
+    <div class="main" id="#commentl=480">
+		<h3></h3>
+		<div class="checkboxOne">
+			<input type="checkbox" value="1" id="checkboxOneInput" name="">
+			<label for="checkboxOneInput"></label>
+		</div>
+    </div>
+    <div class="main">
+		<h3></h3>
+		<div class="checkboxOne">
+			<input type="checkbox" value="1" id="checkboxOneInput" name="">
+			<label for="checkboxOneInput"></label>
+		</div>
+    </div>
+    <div class="main">
+		<h3></h3>
+		<div class="checkboxOne">
+			<input type="checkbox" value="1" id="checkboxOneInput" name="">
+			<label for="checkboxOneInput"></label>
+		</div>
+    </div>
+    <a href="#commentl=480" class="comment-item-number"><span></span><i>5</i></a>
+
+    <script src="build/app.debug.js"></script>
+<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+<script>
+/*var url=window.location.hash;
+var item = document.getElementById ('box').getElementsByTagName('a'); 
+	for(var i=0;i<item.length;i++){
+		var href = item[i].href+url
+		item[i].href =href; 
+	};*/
+	if($(".detail-car-list")[0]){
+		var url = window.location.hash;
+			var item = $(".detail-car-list").find("a");
+			console.log(item)
+			for (var i = 0; i < item.length; i++) {
+				var href = item[i].href + url
+				item[i].href = href;
+			};
+	}
+
+
+
+</script>
+
+</body>
+
+</html>
